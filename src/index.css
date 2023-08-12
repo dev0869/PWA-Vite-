@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: .4rem;
+    height: .6rem;
+    /* background-color: aliceblue; */
+    border-radius: .3rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: #386FA4;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(56, 111, 164, .8);
+  }
+
+  .scrollbar-page::-webkit-scrollbar {
+    width: .8rem;
+    /* background-color: #C9C9C9; */
+  }
+
+  .scrollbar-page::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: #386FA4;
+  }
+
+  .scrollbar-page::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(56, 111, 164, .8);
+  }
+
+
+  .scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: #386FA4;
+  }
+
+  .scrollbar-page {
+    scrollbar-width: auto;
+    scrollbar-color: #386FA4;
+  }
+}
